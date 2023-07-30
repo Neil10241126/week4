@@ -1,4 +1,73 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+.footer {
+  &-main {
+    border-bottom: 1px solid #FFFFFF;
+    a {
+      @include hover-transition {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  &-body {
+    i {
+      margin-right: 20px;
+    }
+  }
+  &-end {
+    a {
+      @include hover-transition {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  @include pad {
+    .nav-link {
+      li:nth-child(2) {
+        margin-left: map-get($spacer-type, 2);
+        margin-right: map-get($spacer-type, 2);
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  @include mobile {
+    padding-top: map-get($spacer-type, 3);
+    padding-bottom: map-get($spacer-type, 3);
+    &-main {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: map-get($spacer-type, 3);
+      .navigation {
+        display: none;
+      }
+      .nav-link img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &-body {
+      i {
+        font-size: 18px;
+        margin-right: 11px;
+      }
+      p {
+        font-size: map-get($font-size-type, 6);
+      }
+    }
+    &-end {
+      padding-top: map-get($spacer-type, 2);
+      flex-direction: column;
+      align-items: flex-start;
+      ul {
+        font-size: 16px;
+        flex-direction: column;
+      }
+      li:nth-child(1) {
+        margin: 8px 0 8px 0
+      }
+    }
+  }
 }

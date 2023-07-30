@@ -1,3 +1,234 @@
-.index-title {
-  font-size: 100px;
+// banner
+.banner {
+  background: url(../images/Index-page/home-header.png);
+  height: 100vh;
+  background-size: cover;
+  &-title {
+    height: 100%;
+  }
+  button {
+    padding: 6px 12px;
+    border: 1px solid map-get($color-type, primary);
+    @include hover-transition {
+      background: #FFFFFF;
+      color: map-get($color-type, primary);
+      font-weight: 700;
+    }
+  }
+  @include pad {
+    background: url(../images/Index-page/home-header-sm.png);
+    background-size: cover;
+  }
+  @include mobile {
+    p {
+      font-size: map-get($font-size-type, 6);
+    }
+    h2 {
+      font-size: map-get($font-size-type, 4);
+    }
+  }
+}
+
+// serve
+.serve {
+  li {
+    width: 24%;
+  }
+  @include pad {
+    ul {
+      flex-wrap: wrap;
+    }
+    li {
+      width: 49%;
+      &:nth-child(-n+2) {
+        margin-bottom: map-get($spacer-type, 3);
+      }
+    }
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2 {
+      font-size: 24px;
+    }
+    ul {
+      justify-content: center;
+    }
+    li {
+      width: max(70%, 375px);
+      &:nth-child(-n+3) {
+        margin-bottom: map-get($spacer-type, 3);
+      }
+    }
+  }
+}
+
+// category
+.category {
+  li {
+    width: 32%;
+  }
+  @include pad {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    li {
+      width: 48%;
+      &:nth-child(-n+2) {
+        margin-bottom: map-get($spacer-type, 3);
+      }
+    }
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2 {
+      font-size: map-get($font-size-type, 4);
+      margin-bottom: map-get($spacer-type, 3);
+    }
+    li {
+      width: min(348px, 100%);
+    }
+  }
+}
+
+// design
+.design {
+  background: url(../images/Index-page/index-bg.png);
+  background-size: cover;
+  @include pad {
+    background: url(../images/Index-page/index-bg-sm.png);
+    background-size: cover;
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    li {
+      width: min(696px, 100%);
+      &:nth-child(1) {
+        margin-bottom: map-get($spacer-type, 3);
+      }
+    }
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2 {
+      font-size: map-get($font-size-type, 4);
+      margin-bottom: map-get($spacer-type, 3);
+    }
+    li {
+      &:nth-child(1) {
+        img {
+          content: url(../images/Index-page/home-section4-1-sm.png)
+        }
+      }
+      &:nth-child(2) {
+        img {
+          content: url(../images/Index-page/home-section4-2-sm.png)
+        }
+      }
+    }
+  }
+}
+
+// recommend
+.recommend {
+  .card {
+    width: 24%;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px #00000029;
+    &-caption {
+      margin-bottom: 72px;
+    }
+    &-muted {
+      font-family: 'Noto Sans', sans-serif;
+      color: #707070;
+    }
+  }
+  @include pad {
+    ul {
+      flex-wrap: wrap;
+    }
+    .card {
+      width: 49%;
+      &:nth-child(-n+2) {
+        margin-bottom: map-get($spacer-type, 3);
+      }
+    }
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2 {
+      font-size: map-get($font-size-type, 4);
+      margin-bottom: map-get($spacer-type, 3);
+    }
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      width: min(612px, 100%);
+      &:nth-child(-n+3) {
+        margin-bottom: map-get($spacer-type, 3);
+      }
+    }
+  }
+}
+
+// contact
+.contact {
+  &-wrap {
+    width: min(636px, 100%);
+  }
+  .form-input, textarea {
+    padding: 6px 11px;
+    border: 1px solid #000000;
+    &::placeholder {
+      opacity: 0.4;
+    }
+  }
+  .form-check {
+    width: 20px;
+    height: 20px;
+  }
+  button {
+    padding: 16px 176px;
+    margin: 64px auto 0;
+    cursor: pointer;
+    border: 1px solid map-get($color-type, primary);
+    @include hover-transition {
+      background: map-get($color-type, info);
+      color: map-get($color-type, primary);
+    }
+    &:active {
+      span {
+        display: block;
+        transform: translateY(2px);
+      }
+    }
+  }
+  @include pad {
+    h2 {
+      margin-bottom: map-get($spacer-type, 3);
+    }
+    p {
+      font-size: map-get($font-size-type, 6);
+    }
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2 {
+      font-size: map-get($font-size-type, 4);
+    }
+    button {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
+  }
 }

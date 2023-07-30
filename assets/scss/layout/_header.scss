@@ -1,4 +1,44 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.nav {
+  .logo {
+    background: url(../images/Layout-page/logo-white.png);
+    background-size: contain;
+    width: 80px;
+    height: 49px;
+    @include hide-text
+  }
+  .navigation {
+    a {
+      @include hover-transition {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  @include mobile {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navigation {
+      display: none;
+    }
+    .navigation-mobile {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      li {
+        width: 50%;
+      }
+      a {
+        border: 1px solid #FFFFFF;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        @include hover-transition {
+          background: #FFFFFF;
+          color: map-get($color-type, primary);
+          border: 1px solid map-get($color-type, primary);
+          font-weight: 700;
+        }
+      }
+    }
+  }
 }
