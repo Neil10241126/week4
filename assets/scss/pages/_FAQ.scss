@@ -1,0 +1,17 @@
+// faq
+.faq {
+  h2 {
+    border-left: 8px solid map-get($color-type, primary)
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2 {
+      font-size: map-get($font-size-type, 4);
+      margin-bottom: map-get($spacer-type, 3);
+    }
+    li:nth-child(-n+4) {
+      margin-bottom: map-get($spacer-type, 3);
+    }
+  }
+}

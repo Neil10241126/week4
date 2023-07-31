@@ -1,0 +1,15 @@
+.pagination {
+  a {
+    font-size: 18px;
+    padding: 12px 16px;
+    border: 1px solid #555555;
+    color: #555555;
+    @include hover-transition {
+      background: #000000;
+      color: #FFFFFF;
+    }
+  }
+  @include mobile {
+    padding-bottom: 64px;
+  }
+}

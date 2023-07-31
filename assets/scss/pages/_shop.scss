@@ -1,0 +1,68 @@
+// shop
+.shop {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  color: #212529;
+  h2 {
+    border-left: 8px solid map-get($color-type, primary)
+  }
+  .form-select {
+    margin-bottom: 40px;
+    select {
+      width: 290px;
+      font-size: 18px;
+      padding: 6px 12px;
+      color: #495057;
+      border: 1px solid #CED4DA;
+    }
+  }
+  &-content {
+    width: 44%;
+  }
+  .location {
+    width: 54%;
+    object-fit: cover;
+  }
+  &-info {
+    h3, ul {
+      border: 1px solid #00000020;
+    }
+  }
+  @include pad {
+    &-item {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: map-get($spacer-type, 3);
+      img, .shop-info {
+        width: 49%;
+      }
+    }
+    .location {
+      width: 100%;
+    }
+  }
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 64px;
+    h2 {
+      font-size: map-get($font-size-type, 4);
+      margin-bottom: map-get($spacer-type, 3);
+    }
+    label {
+      font-size: map-get($font-size-type, 6);
+      margin-right: map-get($spacer-type, 1);
+    }
+    &-content {
+      flex-direction: column;
+      align-items: center;
+      img, .shop-info {
+        width: 100%;
+      }
+    }
+  }
+}
