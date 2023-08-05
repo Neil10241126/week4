@@ -1,0 +1,25 @@
+// blogNav
+.blogNav {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  a {
+    @include hover-transition {
+      transform: translateY(-5px);
+    }
+  }
+  @include mobile {
+    ul {
+      width: 100%;
+      justify-content: space-between;
+      li {
+        margin: 0;
+      }
+      a {
+        font-size: map-get($font-size-type, 6);
+      }
+    }
+    .icon {
+      display: none;
+    }
+  }
+}

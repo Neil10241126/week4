@@ -9,7 +9,21 @@
       color: #FFFFFF;
     }
   }
+  .btn-pre, .btn-next {
+    font-size: 19px;
+    padding: 11px 12px;
+    line-height: 29px;
+  }
   @include mobile {
     padding-bottom: 64px;
+    a {
+      font-size: map-get($font-size-type, 6);
+      padding: 12px 13px;
+    }
+    .btn-pre, .btn-next {
+      font-size: map-get($font-size-type, 6);;
+      padding: 11px;
+      line-height: 26px;
+    }
   }
 }

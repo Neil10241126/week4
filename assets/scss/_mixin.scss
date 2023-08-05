@@ -9,7 +9,7 @@
 // 連結 : https://stackoverflow.com/questions/33058004/applying-an-ellipsis-to-multiline-text/41137262#41137262
 @mixin text-vertical-truncate {
   display: -webkit-box;
-  max-width: 200px;
+  max-width: 100%;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
